@@ -1,0 +1,118 @@
+.navbar {
+  background-color: transparent;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgb(204, 112, 46);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo and nav */
+  width: 100%;
+  max-width: 1200px; /* Limit container width for better centering */
+  margin: 0 auto; /* Center the container */
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  list-style: none; /* Remove bullet points */
+}
+
+.logo {
+  width: 9em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Navbar Links */
+.nav-links li {
+  margin-left: 2rem;
+  font-size: 20px;
+}
+
+.nav-links a {
+  color: #f5f1f1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  background-color: #AB5F1A;
+  opacity: 0.5;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-right: 20px; /* Added margin to space it from the edge */
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Menu Styles for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0; /* Align to the right */
+    width: 50%;
+    background-color: rgba(231, 147, 87, 0.6);
+    padding: 20px;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger span.open {
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,82 @@
+.team {
+  text-align: center;
+  padding: 40px;
+}
+.team1{
+  background-color: #ffffff; 
+  padding: 40px;
+}
+
+.bgimg{
+  background-size: cover; 
+  background-position: center;
+}
+
+.team-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.team-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+  position: relative; 
+}
+
+.team-image {
+  width: 200px;  
+  height: 200px;
+  object-fit: cover;  
+  border-radius: 5%; 
+  border: 3px solid #ccc; 
+  transition: transform 0.3s ease;
+  position: relative;  
+}
+
+.team-image:hover {
+  transform: scale(1.1);
+}
+
+.detail {
+  position: absolute;  
+  bottom: 0;  
+  left: 50%;  
+  transform: translateX(-50%);  
+  background-color: #F6F3EB;  
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);  
+  width: 100%;  
+  max-width: 270px;  
+  padding: 10px;
+  height: 50px;  
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  opacity: 0;  
+  transition: opacity 0.3s ease;  
+}
+
+.team-image:hover + .detail {
+  opacity: 1;  
+}
+
+.detail-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;  
+  text-align: center;  
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+}
+
+.social img{
+  width: 40px;
+  padding: 5px;
+  filter: brightness(1) saturate(200%) invert(60%) sepia(80%) hue-rotate(30deg) contrast(110%);
+}
